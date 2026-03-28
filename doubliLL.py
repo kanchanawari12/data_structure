@@ -111,7 +111,17 @@ class Linklist:
 
 
     def delete_end(self):
-        pass
+        if self.head is None:
+            print("LL is empty")
+        elif self.head.nref is None:
+            self.head=None 
+        else:
+            n=self.head
+            while True:
+                if n.nref.nref is None:
+                    n.nref=None
+                    return
+                n=n.nref
 
     def delete_random(self,data):
         pass
@@ -133,6 +143,12 @@ a1.delete_begin()
 a1.delete_begin()
 a1.delete_begin()
 a1.delete_begin()
+a1.delete_end()
+a1.delete_end()
+a1.delete_end()
+a1.delete_end()
+a1.delete_end()
+a1.delete_end()
 a1.traversal_forward() 
 # a1.traversal_backward() 
 
