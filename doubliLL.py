@@ -103,7 +103,12 @@ class Linklist:
             print("LL is not empty")
     
     def delete_begin(self):
-        pass
+        if self.head is None:
+            print("LL is empty")
+        else:
+            self.head.nref.pref=None
+            self.head=self.head.nref
+
 
     def delete_end(self):
         pass
@@ -124,6 +129,10 @@ a1.add_before(70,40)
 a1.add_before(80,30)
 a1.add_before(90,80)
 a1.add_after(90,100)
+a1.delete_begin()
+a1.delete_begin()
+a1.delete_begin()
+a1.delete_begin()
 a1.traversal_forward() 
 # a1.traversal_backward() 
 
