@@ -123,8 +123,23 @@ class Linklist:
                     return
                 n=n.nref
 
-    def delete_random(self,data):
-        pass
+    def delete_random(self,x):
+        if self.head is None:
+            print("LL is empty")
+            return
+        if self.head.data == x:
+            self.head=self.head.nref
+        n=self.head
+        while n.nref is not None:
+            if n.nref.data == x:
+                break
+            n=n.nref
+        if n.nref is None:
+            print("element not found")
+        else:
+            n.nref=n.nref.nref
+            if n.nref is not None:
+                n.nref.pref=n
             
 
 a1=Linklist() 
@@ -146,9 +161,9 @@ a1.delete_begin()
 a1.delete_end()
 a1.delete_end()
 a1.delete_end()
-a1.delete_end()
-a1.delete_end()
-a1.delete_end()
+a1.delete_random(40)
+a1.delete_random(70)
+a1.delete_random(60)
 a1.traversal_forward() 
 # a1.traversal_backward() 
 

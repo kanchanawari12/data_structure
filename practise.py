@@ -259,12 +259,12 @@ n=a  # removes the last digit from the original number
 # print(list(result))
 
 # 12.reduce function
-from functools import reduce
-a=[1,2,3,4,5]
-result=reduce(lambda x,y:x+y,a)
-res=reduce(lambda x,y:x*y,a)
-print(result)
-print(res)
+# from functools import reduce
+# a=[1,2,3,4,5]
+# result=reduce(lambda x,y:x+y,a)
+# res=reduce(lambda x,y:x*y,a)
+# print(result)
+# print(res)
 
 # decorators in python
 # def decorator(func):
@@ -292,22 +292,32 @@ print(res)
 # for i in g:
 #     print(i)
 
-num=5655
-rev=0
-stack=[]
-while True:
-    if len(stack)==0:
-        break
-    else:
-        stack.append(num%10)
-        num=num//10
-print(stack)
-while True:
-    if len(stack)==0:
-        break
-    else: 
-        rev=rev*10+stack.pop()
-print(rev)
+# num=5655
+# rev=0
+# stack=[]
+# while True:
+#     if len(stack)==0:
+#         break
+#     else:
+#         stack.append(num%10)
+#         num=num//10
+# print(stack)
+# while True:
+#     if len(stack)==0:
+#         break
+#     else: 
+#         rev=rev*10+stack.pop()
+# print(rev)
+
+
+# two sum problem
+list=[1,2,3,4,5]
+target=5
+for i in list:
+    for j in list:
+        if i+j==target:
+            print(i,j)
+    
 
 
 

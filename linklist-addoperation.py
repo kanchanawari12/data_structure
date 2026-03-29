@@ -107,22 +107,22 @@ class LL:
                n.ref=n.ref.ref
             n=n.ref
 
-    # def delete_random_before(self,x):
-    #     if self.head.ref is None or self.head is None:
-    #         print("Not enough Node")
-    #         return
-    #     prev = None
-    #     n=self.head
-    #     while n is not None:
-    #         if n.ref.data == x:
-    #             prev=n.ref
-    #             return
-    #         n=n.ref
-    #     while True:
-    #         if n.ref.ref == prev:
-    #             n.ref=prev
-    #             return
-    #         n=n.ref
+    def delete_random_before(self,x):
+        if self.head.ref is None or self.head is None:
+            print("Not enough Node")
+            return
+        prev = None
+        n=self.head
+        while n is not None:
+            if n.ref.data == x:
+                prev=n.ref
+                return
+            n=n.ref
+        while True:
+            if n.ref.ref == prev:
+                n.ref=prev
+                return
+            n=n.ref
             
 b1=LL()
 b1.add_begin(10)
