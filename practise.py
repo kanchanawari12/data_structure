@@ -312,12 +312,35 @@ n=a  # removes the last digit from the original number
 
 # two sum problem
 list=[1,2,3,4,5]
-target=5
-for i in list:
-    for j in list:
-        if i+j==target:
-            print(i,j)
-    
+# target=5
+# for i in list:
+#     for j in list:
+#         if i+j==target:
+#             print(i,j)
+
+def reverse_number(num):
+    rev=0
+    while True:
+        a=num%10
+        c=num//10
+        rev=rev*10+a
+        num=c
+        if num==0:
+            return rev
+def reverse_string(str):
+    return str[::-1]
+def rev_str(str):
+    rev=""
+    while True:
+        if len(str)==0:
+            return rev
+        else:
+            rev=rev+str[-1]
+            str=str[:-1]
+        
+print(reverse_number(667788))
+print(reverse_string("kanchan"))
+print(rev_str("kanchan"))
 
 
 
