@@ -45,6 +45,28 @@ class Linklist:
                 n=n.ref
             n.ref=new_node
             new_node.ref=self.head
+
+    def add_after(self,data,x):
+        new_node=Node(data)
+        if self.head is None:
+            print("LL is empty")
+            return
+        elif self.head.ref==self.head and self.head.data==x:
+            self.head.ref=new_node
+            new_node.ref=self.head
+        else:
+            n=self.head
+            while True:
+                if n.data==x:
+                    new_node.ref=n.ref
+                    n.ref=new_node    
+                n=n.ref
+                if n==self.head:
+                    print(x,"is not present in LL")
+                    return
+                
+            
+            
             
 a1=Linklist()
 a1.add_begin(10)
@@ -52,4 +74,6 @@ a1.add_begin(10)
 a1.add_begin(30)
 a1.add_end(40)
 a1.add_end(50)
+a1.add_after(20,50)
+a1.add_after(60,40)
 a1.traversal()
