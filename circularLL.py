@@ -51,9 +51,9 @@ class Linklist:
         if self.head is None:
             print("LL is empty")
             return
-        elif self.head.ref==self.head and self.head.data==x:
-            self.head.ref=new_node
-            new_node.ref=self.head
+        # elif self.head.ref==self.head and self.head.data==x:
+        #     self.head.ref=new_node
+        #     new_node.ref=self.head
         else:
             n=self.head
             while True:
@@ -65,17 +65,42 @@ class Linklist:
                 if n==self.head:
                     print("Element not found")
                     break
+    
+    def add_before(self,data,x):
+        new_node=Node(data)
+        if self.head is None:
+            print("LL is empty")
+            return
+        elif self.head.data==x:
+            n=self.head
+            while True:
+                if n.ref==self.head:
+                    new_node.ref=self.head
+                    self.head=new_node
+                    n.ref=new_node
+                    return
+                n=n.ref
+        n=self.head
+        while True:
+            if n.ref.data==x:
+                new_node.ref=n.ref
+                n.ref=new_node
+                return
+            n=n.ref
+            if n==self.head:
+                print("Element not found")
+                break
+
                 
             
             
             
 a1=Linklist()
 a1.add_begin(10)
-a1.add_begin(10)
-a1.add_begin(30)
-a1.add_end(40)
-a1.add_end(50)
-a1.add_after(70,0)
-a1.add_after(20,50)
-a1.add_after(60,40)
+a1.add_after(60,10)
+a1.add_after(70,60)
+a1.add_after(80,10)
+a1.add_before(50,60)
+a1.add_before(40,10)
+a1.add_before(100,40)
 a1.traversal()
