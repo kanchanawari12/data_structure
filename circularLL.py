@@ -59,11 +59,12 @@ class Linklist:
             while True:
                 if n.data==x:
                     new_node.ref=n.ref
-                    n.ref=new_node    
+                    n.ref=new_node  
+                    return  
                 n=n.ref
                 if n==self.head:
-                    print(x,"is not present in LL")
-                    return
+                    print("Element not found")
+                    break
                 
             
             
@@ -74,6 +75,7 @@ a1.add_begin(10)
 a1.add_begin(30)
 a1.add_end(40)
 a1.add_end(50)
+a1.add_after(70,0)
 a1.add_after(20,50)
 a1.add_after(60,40)
 a1.traversal()
