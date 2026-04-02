@@ -13,24 +13,28 @@ class Linklist:
             print("LL is empty")
         else:
             n=self.head
-            while n is not self.head.ref:
+            while True:
                 print(n.data,"--->",end=" ")
                 n=n.ref
+                if n==self.head:
+                    break
     
     def add_begin(self,data):
         new_node=Node(data)
         if self.head is None:
+            new_node.ref=new_node
             self.head=new_node
-            new_node.ref=self.head
             return
         else:
             n=self.head
-            while n is not self.head:
+            while n.ref != self.head:
                 n=n.ref
-            n.ref=new_node
             new_node.ref=self.head
             self.head=new_node
+            n.ref=self.head
 
 a1=Linklist()
 a1.add_begin(10)
+a1.add_begin(10)
+a1.add_begin(30)
 a1.traversal()
