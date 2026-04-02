@@ -32,6 +32,9 @@ class Linklist:
             new_node.ref=self.head
             self.head=new_node
             n.ref=self.head
+        
+    def add_end(self,data):
+        pass
 
 a1=Linklist()
 a1.add_begin(10)
