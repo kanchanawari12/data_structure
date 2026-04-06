@@ -318,29 +318,43 @@ list=[1,2,3,4,5]
 #         if i+j==target:
 #             print(i,j)
 
-def reverse_number(num):
-    rev=0
-    while True:
-        a=num%10
-        c=num//10
-        rev=rev*10+a
-        num=c
-        if num==0:
-            return rev
-def reverse_string(str):
-    return str[::-1]
-def rev_str(str):
-    rev=""
-    while True:
-        if len(str)==0:
-            return rev
-        else:
-            rev=rev+str[-1]
-            str=str[:-1]
+# def reverse_number(num):
+#     rev=0
+#     while True:
+#         a=num%10
+#         c=num//10
+#         rev=rev*10+a
+#         num=c
+#         if num==0:
+#             return rev
+# def reverse_string(str):
+#     return str[::-1]
+# def rev_str(str):
+#     rev=""
+#     while True:
+#         if len(str)==0:
+#             return rev
+#         else:
+#             rev=rev+str[-1]
+#             str=str[:-1]
         
-print(reverse_number(667788))
-print(reverse_string("kanchan"))
-print(rev_str("kanchan"))
+# print(reverse_number(667788))
+# print(reverse_string("kanchan"))
+# print(rev_str("kanchan"))
+
+l1=[1,2,3]
+l2=[4,5,6]
+result=[]
+for i in range(len(l1)):
+    for j in range(i+1,len(l2)):
+        sum=l1[i]+l2[j]
+        result.append(sum)
+print(result)
+print(result[::-1])
+
+
+
+
 
 
 
