@@ -342,15 +342,61 @@ list=[1,2,3,4,5]
 # print(reverse_string("kanchan"))
 # print(rev_str("kanchan"))
 
-l1=[1,2,3]
-l2=[4,5,6]
-result=[]
-for i in range(len(l1)):
-    for j in range(i+1,len(l2)):
-        sum=l1[i]+l2[j]
-        result.append(sum)
-print(result)
-print(result[::-1])
+# l1=[1,2,3]
+# l2=[4,5,6]
+# result=[]
+# for i in range(len(l1)):
+#     for j in range(i+1,len(l2)):
+#         sum=l1[i]+l2[j]
+#         result.append(sum)
+# print(result)
+# print(result[::-1])
+
+
+#fibonacci series
+# 0 1 1 2 3 5 8 13 21 34
+# a=0
+# b=1
+# print(a,b,end=" ")
+# for i in range(10):
+#     sum=a+b
+#     print(sum,end=" ")
+#     a,b=b,sum
+
+# factorial of a number
+# n=10
+# sum=1
+# for i in range(1,6):
+#     sum=sum*i
+# print(sum)
+
+# list=[1,2,3,4,5]
+# for ind,value in enumerate(list):     # enumerate is used to get the index and the value of each element in the list
+#     print(ind,value)
+
+# list1=[1,2,3,4,5]
+# list2=[6,7,8,9,10]
+# for i,j in zip(list1,list2):   # zip is used to iterate over two or more lists simultaneously
+#     print(i+j)
+
+for i in range(1,6):
+    for j in range(i):
+        print("*",end=" ")
+    print()         # it will print a pattern of stars and it will print a new line after each row of stars
+
+for i in range(5,0,-1):
+    for j in range(i):
+        print("*",end=" ")
+    print()         # it will print a pattern of stars in reverse order and it will print a new line after each row of stars
+
+for i in range(1,6):
+    print(" "*(5-i),end="")
+    print("* "*i)
+
+for j in range(5,0,-1):
+    print(" "*(5-j),end="")
+    print("* "*j)
+
 
 
 

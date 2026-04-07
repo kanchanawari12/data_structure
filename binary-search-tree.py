@@ -42,9 +42,32 @@ class BST:
             else:
                 self.rchild.search(data)
 
+    def preorder(self):
+        print(self.key)
+        if self.lchild:
+            self.lchild.preorder()
+        if self.rchild:
+            self.rchild.preorder()
+
+    def inorder(self):
+        if self.lchild:
+            self.lchild.inorder()
+        print(self.key)
+        if self.rchild:
+            self.rchild.inorder()
+
+    def postorder(self):
+        if self.lchild:
+            self.lchild.postorder()
+        if self.rchild:
+            self.rchild.postorder()
+        print(self.key)
+
 root=BST(None)
 root.insert(10)
 list=[1,5,15,20,3]
 for i in list:
     root.insert(i)
-root.search(21)
+# root.preorder()
+# root.inorder()
+root.postorder()
