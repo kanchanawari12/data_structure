@@ -63,6 +63,21 @@ class BST:
             self.rchild.postorder()
         print(self.key)
 
+    def delete(self,data):
+        if self.key is None:
+            print("Tree is Empty")
+        if self.key > data:
+            if self.lchild is None:
+                print("Not found")
+                return
+            else:
+                self.lchild.delete(data)
+        elif self.key < data:
+            if self.rchild is None:
+                print("Not found")
+                return
+            else:
+                self.rchild.delete(data)
 root=BST(None)
 root.insert(10)
 list=[1,5,15,20,3]

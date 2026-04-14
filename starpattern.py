@@ -38,3 +38,41 @@ for i in range(1,6):
       sum=sum+j
       print(sum,end=" ")
     print()
+
+print("8th pattern")
+n=4
+for i in range(n):
+    for j in range(n):
+        print("*",end=" ")
+    print()
+
+print("9th pattern")
+for i in range(1,6):
+    print("* "*i)
+
+for i in range(1,6):
+    print(" "*(5-i),end="")
+    print("* "*i)
+
+for i in range(5,0,-1):
+    print("* "*i)
+
+print("10th pattern")
+for i in range(1,6):
+    for j in range(i,6):
+        print(" ",end="")
+    for k in range(1,i+1):
+        print("* ",end="")
+    print()
+
+print("11th pattern")
+for i in range(1,6):
+    for j in range(i,6):
+        print(" ",end="")
+    for k in range(i):
+        print("*",end="")
+    for l in range(i+1):
+        print("*",end="")
+    print()
+
+   
