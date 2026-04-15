@@ -78,6 +78,22 @@ class BST:
                 return
             else:
                 self.rchild.delete(data)
+        else:
+            if self.lchild is None:
+                temp=self.rchild
+                self=None
+                return temp
+            if self.rchild is None:
+                temp=self.lchild
+                self=None
+                return temp
+            node=self.rchild
+            while node.lchild:
+                node=node.lchild
+            self.key=node.key
+            self.rchild=self.rchild.delete(node.key)
+        return self
+                
 root=BST(None)
 root.insert(10)
 list=[1,5,15,20,3]
@@ -86,3 +102,4 @@ for i in list:
 # root.preorder()
 # root.inorder()
 root.postorder()
+
