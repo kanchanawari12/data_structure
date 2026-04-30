@@ -399,6 +399,26 @@ for j in range(5,0,-1):
 
 
 
+class Tree:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+
+    def insert(self,data):
+        if self.data is None:
+            self.data=data
+        elif data<self.data:
+            if self.left is None:
+                self.left=Tree(data)
+            else:
+                self.left.insert(data)
+        else:
+            if self.right is None:
+                self.right=Tree(data)
+            else:
+                self.right.insert(data)
+
 
 
 
